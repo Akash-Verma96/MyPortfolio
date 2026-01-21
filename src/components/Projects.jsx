@@ -1,57 +1,36 @@
-import solarVideo from '../assets/Solar.mp4'
-import netflixVideo from '../assets/Netflix.mp4'
-
 const projects = [
   {
     name: "DevTinder App",
     description:
       "A full-stack Devloper community App where many Devloper can Connect and Grow together.",
-    videoUrl:solarVideo,
+    image:
+      "https://i.pinimg.com/1200x/fc/d8/31/fcd8310354601ee5a6f161324cee0ada.jpg",
     type: "Full Stack",
-    liveLink: "#",
+    liveLink: "13.60.174.91",
   },
   {
     name: "Music Website",
     description: "A modern responsive music website where we can enjoy..",
-    videoUrl: solarVideo,
+    image:
+      "https://i.pinimg.com/1200x/77/f3/2d/77f32d5f63795088ec4159d885ef85c2.jpg",
     type: "Frontend",
     liveLink: "#",
   },
   {
     name: "Netflix Clone",
     description: "A responsive complete Netflix Clone",
-    videoUrl:netflixVideo,
+    image:
+      "https://i.pinimg.com/1200x/81/3c/d6/813cd6c3ba5b10c038198a993833c12e.jpg",
     type: "Frontend",
     liveLink: "#",
   },
   {
     name: "Solar System",
     description: "A 3D solar system symulation app.",
-    videoUrl:solarVideo,
+    image:
+      "https://i.pinimg.com/1200x/46/d4/2a/46d42a69a3e27fbc30801107907b6445.jpg",
     type: "3js Project",
     liveLink: "https://solar-system-website-dun.vercel.app/",
-  },
-  {
-    name: "Music Website2",
-    description: "A modern responsive music website where we can enjoy..",
-    videoUrl:netflixVideo,
-    type: "Frontend",
-    liveLink: "#",
-  },
-  {
-    name: "Netflix Clone2",
-    description: "A responsive complete Netflix Clone",
-    videoUrl:netflixVideo,
-    type: "Frontend",
-    liveLink: "#",
-  },
-  {
-    name: "DevTinder App2",
-    description:
-      "A full-stack Devloper community App where many Devloper can Connect and Grow together.",
-    videoUrl:solarVideo,
-    type: "Full Stack",
-    liveLink: "#",
   },
 ];
 export default function Projects() {
@@ -83,23 +62,11 @@ export default function Projects() {
           >
             {/* Image */}
             <div className="rounded-xl overflow-hidden mb-4">
-              {/* <img
+              <img
                 src={project.image}
                 alt={project.name}
                 className="w-full h-44 object-cover"
-              /> */}
-              <div className="rounded-xl overflow-hidden mb-4">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-44 object-cover"
-                >
-                  <source src={project.videoUrl} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
+              />
             </div>
 
             {/* Tag */}
@@ -117,12 +84,11 @@ export default function Projects() {
 
             {/* Button */}
             <button
-              href="https://solar-system-website-dun.vercel.app/"
-              target="_blank"
               className="relative px-6 py-3 rounded-xl cursor-pointer
             hover:bg-black border border-(--color-muted) group overflow-hidden border-x-(--color-primary)"
             >
-              <span className="relative z-10">Live Preview</span>
+              {/* <span >Live Preview</span> */}
+              <a className="relative z-10" href={project.liveLink} target="_blank">Live Preview</a>
 
               <span
                 className="absolute inset-0 rounded-xl pointer-events-none
