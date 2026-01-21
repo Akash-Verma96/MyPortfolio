@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg: #000000;
+    --color-text: #ffffff;
+    --color-card: #f3f4f6;
+    --color-primary: #f97316;
+    --color-muted: #6b7280;
+  }
+
+  .dark {
+    --color-bg: #0b1220;
+    --color-text: #ffffff;
+    --color-card: #111827;
+    --color-primary: #f97316;
+    --color-muted: #9ca3af;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  }
+}
+
+@layer utilities {
+  .group > span:last-child::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.5px;
+
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.8),
+      transparent
+    );
+
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+      
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+
+    animation: glass-border-run 2s linear infinite;
+  }
+
+  .group:hover > span:last-child::before {
+    opacity: 1;
+  }
+
+  @keyframes glass-border-run {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  .stars {
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+    background-color: black;
+
+    background-image:
+      radial-gradient(2px 2px at 20px 30px, #ffffff, transparent),
+      radial-gradient(2px 2px at 80px 120px, #ffffff, transparent),
+      radial-gradient(2px 2px at 150px 60px, #ffffff, transparent),
+      radial-gradient(2px 2px at 200px 200px, #ffffff, transparent),
+      radial-gradient(2px 2px at 300px 100px, #ffffff, transparent),
+      radial-gradient(2px 2px at 400px 250px, #ffffff, transparent);
+
+    background-size: 400px 400px;
+    animation: moveStars 120s linear infinite;
+  }
+
+  @keyframes moveStars {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 2000px 2000px;
+    }
+  }
+
+  .stars::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(2px 2px at 50px 80px, white, transparent),
+    radial-gradient(2px 2px at 120px 200px, white, transparent);
+  background-size: 600px 600px;
+  animation: moveStars 200s linear infinite;
+  opacity: 0.6;
+}
+
+}
+
+
+/* Hide scrollbar but keep scroll working */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+
