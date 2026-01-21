@@ -85,7 +85,7 @@ export default function Contact() {
 
             <button
               type="submit"
-              className="relative ml-60 px-6 py-3 rounded-xl cursor-pointer
+              className="relative px-6 py-3 rounded-xl cursor-pointer
             hover:bg-black border border-(--color-muted) group overflow-hidden"
             >
               <span className="relative z-10">Send Message</span>
