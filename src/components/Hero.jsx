@@ -1,18 +1,28 @@
 import heroImage from "../assets/hero.png";
-import { FaGithub, FaTwitter, FaLinkedin ,FaDownload, FaPhoneAlt} from "react-icons/fa";
+import LeetCodeIcon from "../assets/leetcode.svg";
+import TufLogo from "../assets/TUFLogo.png"
 
 
+import {
+  FaGithub,
+  FaTwitter,
+  FaLinkedin,
+  FaDownload,
+  FaPhoneAlt,
+} from "react-icons/fa";
 
 export default function Hero() {
-
-  const scrollTo = (id) =>{
+  const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({
-      behavior:"smooth",
+      behavior: "smooth",
     });
-  }
-   
+  };
+
   return (
-    <section id="home" className="max-w-7xl mx-auto px-6 py-25 grid md:grid-cols-2 gap-10 items-center">
+    <section
+      id="home"
+      className="max-w-7xl mx-auto px-6 py-25 grid md:grid-cols-2 gap-10 items-center"
+    >
       <div>
         <div className="flex gap-5 mb-2 text-2xl">
           <a
@@ -36,6 +46,21 @@ export default function Hero() {
           >
             <FaLinkedin />
           </a>
+        
+          <a
+            className="text-white  transition-colors"
+            href=""
+            target="_blank"
+          >
+            <img src={LeetCodeIcon} alt="LeetCode" className="w-6 h-6 bg-white rounded p-1 hover:bg-[#FFA116]" />
+          </a>
+          <a
+            className="text-white  transition-colors"
+            href=""
+            target="_blank"
+          >
+            <img src={TufLogo} alt="LeetCode" className="w-6 h-6 bg-white rounded p-1 hover:bg-[#EA763F]" />
+          </a>
         </div>
         <h2 className="text-4xl font-bold mb-4">
           Hi, I’m <span className=" text-(--color-primary)">Akash Verma</span>
@@ -46,31 +71,37 @@ export default function Hero() {
           Algorithms.
         </p>
 
-        <div className="flex gap-4">
+        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
           <a
             href="/Akash Resume.pdf"
             download
             className="relative bg-(--color-primary) px-6 py-3 rounded-xl cursor-pointer
-            hover:bg-black transition-colors duration-500 delay-[50ms ]  hover:border hover:border-(--color-muted) group overflow-hidden hover:text-(--color-primary)"
+    hover:bg-black transition-colors duration-500 delay-[50ms ] hover:border hover:border-(--color-muted) group overflow-hidden hover:text-(--color-primary)
+    w-full sm:w-auto text-center"
           >
-            <span className="relative z-10 flex gap-2 items-center"> Resume <FaDownload/></span>
+            <span className="relative z-10 flex gap-2 items-center justify-center">
+              Resume <FaDownload />
+            </span>
 
             <span
               className="absolute inset-0 rounded-xl pointer-events-none
-                opacity-0 group-hover:opacity-100"
+        opacity-0 group-hover:opacity-100"
             ></span>
           </a>
 
           <button
             className="relative px-6 py-3 rounded-xl cursor-pointer
-            hover:bg-(--color-primary) hover:text-white border transition-colors duration-500 delay-[50ms ] group overflow-hidden border-(--color-primary)"
-            onClick={()=>scrollTo("contact")}
+    hover:bg-(--color-primary) hover:text-white border transition-colors duration-500 delay-[50ms ] group overflow-hidden border-(--color-primary)
+    w-full sm:w-auto"
+            onClick={() => scrollTo("contact")}
           >
-            <span className="relative z-10 flex gap-2 items-center"><FaPhoneAlt />Contact Me </span>
+            <span className="relative z-10 flex gap-2 items-center justify-center">
+              <FaPhoneAlt /> Contact Me
+            </span>
 
             <span
               className="absolute inset-0 rounded-xl pointer-events-none
-                 opacity-100"
+         opacity-100"
             ></span>
           </button>
         </div>

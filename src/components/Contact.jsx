@@ -8,14 +8,18 @@ export default function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
+    emailjs
+      .sendForm(
         "service_c9vj0iv",
         "template_75wt5mn",
         form.current,
-        "p_-LdD3M9s6Db_rHI"
+        "p_-LdD3M9s6Db_rHI",
       )
       .then(
-        () => alert("Thank you for reaching out! I’ve received your message and will get back to you soon. 🚀"),
+        () =>
+          alert(
+            "Thank you for reaching out! I’ve received your message and will get back to you soon. 🚀",
+          ),
         (error) => alert(error.text),
       );
   };
@@ -45,15 +49,15 @@ export default function Contact() {
         </div>
         <div className="grid md:grid-cols-2 gap-8 ">
           {/* Left Side (Info / Visual) */}
-          <div className="">
+          <div className="w-full">
             <img
-              className="width-full h-100 rounded-xl"
+              className="w-full h-auto max-h-100 object-cover rounded-xl"
               src={ContactImage}
               alt="Contact Image"
             />
 
             {/* Optional placeholders */}
-            <div className="space-y-3 flex gap-5 text-gray-400 text-sm">
+            <div className="mt-4 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-5 text-gray-400 text-sm">
               <p>📍 India</p>
               <p>📧 av3764909@email.com</p>
               <p>💼 Open to opportunities</p>
