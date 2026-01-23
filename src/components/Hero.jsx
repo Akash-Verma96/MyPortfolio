@@ -49,14 +49,14 @@ export default function Hero() {
         
           <a
             className="text-white  transition-colors"
-            href=""
+            href="https://leetcode.com/u/Akash_Verma96/"
             target="_blank"
           >
             <img src={LeetCodeIcon} alt="LeetCode" className="w-6 h-6 bg-white rounded p-1 hover:bg-[#FFA116]" />
           </a>
           <a
             className="text-white  transition-colors"
-            href=""
+            href="https://takeuforward.org/profile/av3764909@gmail.com"
             target="_blank"
           >
             <img src={TufLogo} alt="LeetCode" className="w-6 h-6 bg-white rounded p-1 hover:bg-[#EA763F]" />
