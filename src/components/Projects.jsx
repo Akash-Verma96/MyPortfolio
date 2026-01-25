@@ -83,18 +83,18 @@ export default function Projects() {
             <p className="text-sm text-gray-400 mb-4">{project.description}</p>
 
             {/* Button */}
-            <button
+            {/* <button
               className="relative px-6 py-3 rounded-xl cursor-pointer
             hover:bg-black border border-(--color-muted) group overflow-hidden border-x-(--color-primary)"
             >
-              {/* <span >Live Preview</span> */}
+              
               <a className="relative z-10" href={project.liveLink} target="_blank">Live Preview</a>
 
               <span
                 className="absolute inset-0 rounded-xl pointer-events-none
                  opacity-100"
               ></span>
-            </button>
+            </button> */}
           </div>
         ))}
       </div>
