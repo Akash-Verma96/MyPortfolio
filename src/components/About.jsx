@@ -1,6 +1,7 @@
 export default function About() {
   return (
     <section id="about" className="max-w-7xl mx-auto px-6 py-20">
+      <h3 className="text-(--color-primary) text-4xl font-bold  text-center">About Me</h3>
       <div className="bg-card rounded-xl p-8 grid md:grid-cols-2 gap-8">
         <div className=" overflow-hidden h-100 bg-dark rounded-xl flex items-center justify-center">
           <img
@@ -9,10 +10,10 @@ export default function About() {
             className=" w-full h-180 object-contain -scale-x-100"
           />
         </div>
-
-        <div>
-          <h3 className="text-(--color-primary) text-4xl font-bold mb-4">About Me</h3>
-          <p className="text-muted mb-4">
+        <div className="bg-slate-900 p-5 rounded-lg" >
+          <div>
+          <h3 className="text-white text-3xl font-bold mb-4">Full Stack Developer</h3>
+          <p className="text-muted mb-4 text-slate-500">
             I’m a passionate fresher developer focused on building clean,
             responsive user interfaces and scalable web applications.<br/> I enjoy
             turning ideas into functional designs using modern frontend
@@ -46,6 +47,8 @@ export default function About() {
           </button>
           </div>
         </div>
+        </div>
+        
       </div>
     </section>
   );

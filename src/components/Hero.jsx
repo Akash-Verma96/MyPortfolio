@@ -73,7 +73,7 @@ export default function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
           <a
-            href="/Akash Resume.pdf"
+            href="/Akash-Resume.pdf"
             download
             className="relative bg-(--color-primary) px-6 py-3 rounded-xl cursor-pointer
     hover:bg-black transition-colors duration-500 delay-[50ms ] hover:border hover:border-(--color-muted) group overflow-hidden hover:text-(--color-primary)

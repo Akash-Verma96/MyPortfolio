@@ -58,14 +58,15 @@ export default function Projects() {
             rounded-2xl border border-white/10
             bg-white/5 backdrop-blur-xl p-5
             hover:-translate-y-1 transition-all duration-300
-            shadow-lg shadow-orange-500/30  overflow-x-auto scrollbar-hide "
+            shadow-lg shadow-orange-500/30  overflow-x-auto scrollbar-hide 
+            "
           >
             {/* Image */}
             <div className="rounded-xl overflow-hidden mb-4">
               <img
                 src={project.image}
                 alt={project.name}
-                className="w-full h-44 object-cover"
+                className="w-full h-44 object-cover "
               />
             </div>
 
